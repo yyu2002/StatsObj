@@ -1,16 +1,9 @@
 public class Tester {
     public static void main(String[] args) {
-        // StatsObj obj = new StatsObj();
+        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(5);
 
 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-        /*
-        obj.add("suckdeep singh");
-        obj.add("suckdeep singh");
-        obj.add("suckdeep singh");
-        obj.add("suckdeep singh");
-
 
         for (int i = 0; i < 1000; i++) {
             int rand = (int) (Math.random() * 26);
@@ -18,13 +11,15 @@ public class Tester {
         }
 
 
-        System.out.println(obj.getCountOf("a"));
-        System.out.println(obj.getUniqueVals());
+        System.out.println(obj.getCountOf("e"));
+        // System.out.println(obj.getUniqueVals());
         System.out.println(obj.getMostFreq());
-        System.out.println(obj.top3());
-        System.out.println(obj.topN(1000));
-        */
+        // System.out.println(obj.top3());
+        // System.out.println(obj.topN(1000));
+        System.out.println(obj.getTopMostFreq());
 
+
+        /*
         for (int i = 0; i < 10000; i++) {
             StatsObj obj = new StatsObj();
 
@@ -39,7 +34,7 @@ public class Tester {
             long time = end - start;
             System.out.println(i + "\t" + time);
         }
-
+*/
 
     }
 }
