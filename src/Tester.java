@@ -1,13 +1,13 @@
 public class Tester {
     public static void main(String[] args) {
-        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(5);
+        HashingStatsObj obj = new HashingStatsObj(5);
 
 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         for (int i = 0; i < 1000; i++) {
             int rand = (int) (Math.random() * 26);
-            obj.add(alphabet.substring(rand, rand + 1));
+            obj.add(alphabet.substring(rand, rand + 1).charAt(0));
         }
 
 

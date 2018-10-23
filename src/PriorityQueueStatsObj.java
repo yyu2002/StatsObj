@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class PriorityQueueStatsObj {
     private ArrayList<Entry> data;
-    int N;
+    private int N;
 
     public PriorityQueueStatsObj(int N) {
         data = new ArrayList<>();
