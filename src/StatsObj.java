@@ -2,6 +2,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 // Young Yu
+//Hello i am justin
 public class StatsObj {
 
     private ArrayList<String> dataStore;
