@@ -2,7 +2,7 @@ public class Tester {
     public static void main(String[] args) {
         HashingStatsObj obj = new HashingStatsObj(5);
 
-
+        // Alphabet 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         for (int i = 0; i < 1000; i++) {
