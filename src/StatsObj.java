@@ -1,8 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-// Young Yu
-//Hello i am justin
 // Created by Young Yu
 public class StatsObj {
 
