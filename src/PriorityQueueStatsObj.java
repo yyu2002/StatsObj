@@ -77,7 +77,7 @@ public class PriorityQueueStatsObj {
     public ArrayList<String> getTopMostFreq() {
         ArrayList<String> topN = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            if (data.size() > 0)
+            if (data.size() > i)
                 topN.add(data.get(i).getLetter());
         }
         return topN;
