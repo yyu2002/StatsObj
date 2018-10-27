@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+// Created by Young Yu
 public class StatsObj {
 
     private ArrayList<String> dataStore;
