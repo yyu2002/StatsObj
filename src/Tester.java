@@ -1,13 +1,13 @@
 public class Tester {
     public static void main(String[] args) {
-        HashingStatsObj obj = new HashingStatsObj(5);
+        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(5);
 
 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         for (int i = 0; i < 1000; i++) {
             int rand = (int) (Math.random() * 26);
-            obj.add(alphabet.substring(rand, rand + 1).charAt(0));
+            obj.add(alphabet.substring(rand, rand + 1));
         }
 
 
@@ -17,6 +17,7 @@ public class Tester {
         // System.out.println(obj.top3());
         // System.out.println(obj.topN(1000));
         System.out.println(obj.getTopMostFreq());
+        System.out.println(obj.size());
 
 
         /*

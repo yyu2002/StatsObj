@@ -4,10 +4,12 @@ import java.util.ArrayList;
 public class PriorityQueueStatsObj {
     private ArrayList<Entry> data;
     private int N;
+    private int numOfData;
 
     public PriorityQueueStatsObj(int N) {
         data = new ArrayList<>();
         this.N = N;
+        numOfData = 0;
     }
 
     public void add(String item) {
@@ -28,6 +30,7 @@ public class PriorityQueueStatsObj {
                 }
             }
         }
+        numOfData++;
     }
 
     public void sort(Entry entry) {
@@ -56,11 +59,7 @@ public class PriorityQueueStatsObj {
     }
 
     public int size() {
-        int count = 0;
-        for (Entry entry : data) {
-            count += entry.getCount();
-        }
-        return count;
+        return numOfData;
     }
 
     public int getNumUnique() {
