@@ -1,6 +1,6 @@
 public class Tester {
     public static void main(String[] args) {
-        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(5);
+        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(26);
 
         // Alphabet 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -18,6 +18,7 @@ public class Tester {
         // System.out.println(obj.topN(1000));
         System.out.println(obj.getTopMostFreq());
         System.out.println(obj.size());
+        System.out.println(obj.getNumUnique());
 
 
         /*
