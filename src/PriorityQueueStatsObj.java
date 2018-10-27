@@ -13,24 +13,26 @@ public class PriorityQueueStatsObj {
     }
 
     public void add(String item) {
-        if (data.size() == 0) {
-            Entry newEntry = new Entry(item);
-            data.add(newEntry);
+        int entryIndex = findIndexFor(item);
+        Entry e;
+        if (entryIndex == -1) {
+            e = new Entry(item);
+            data.add(e);
         } else {
-            for (int i = 0; i < data.size(); i++) {
-                Entry e = data.get(i);
-                if (e.getLetter().equals(item)) {
-                    e.incrementCount();
-                    sort(e);
-                    break;
-                } else {
-                    Entry newEntry = new Entry(item);
-                    data.add(newEntry);
-                    break;
-                }
-            }
+            e = data.get(entryIndex);
+            e.incrementCount();
         }
         numOfData++;
+    }
+
+    private int findIndexFor(String item) {
+        for (int i = 0; i < data.size(); i++) {
+            Entry e = data.get(i);
+            if (e.getLetter().equals(item)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public void sort(Entry entry) {
@@ -75,7 +77,8 @@ public class PriorityQueueStatsObj {
     public ArrayList<String> getTopMostFreq() {
         ArrayList<String> topN = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            topN.add(data.get(i).getLetter());
+            if (data.size() > 0)
+                topN.add(data.get(i).getLetter());
         }
         return topN;
     }
