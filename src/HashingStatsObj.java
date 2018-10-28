@@ -6,7 +6,7 @@ public class HashingStatsObj {
     private int N;
 
     public HashingStatsObj(int N) {
-        data = new int[127];
+        data = new int[128];
         for (int i = 0; i < data.length; i++) {
             data[i] = 0;
         }
