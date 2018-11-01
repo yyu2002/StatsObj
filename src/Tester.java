@@ -1,13 +1,14 @@
 public class Tester {
     public static void main(String[] args) {
-        HashingStatsObj obj = new HashingStatsObj(26);
+
+        PriorityQueueStatsObj obj = new PriorityQueueStatsObj(26);
 
         // Alphabet 
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         for (int i = 0; i < 1000; i++) {
             int rand = (int) (Math.random() * 26);
-            obj.add(alphabet.substring(rand, rand + 1).charAt(0));
+            obj.add(alphabet.substring(rand, rand + 1));
         }
 
 
@@ -19,6 +20,37 @@ public class Tester {
         System.out.println(obj.getTopMostFreq());
         System.out.println(obj.size());
         System.out.println(obj.getNumUnique());
+
+
+        StatsObjFinalVer statsObj = new StatsObjFinalVer(5);
+        statsObj.add("a");
+        statsObj.add("b");
+        statsObj.add("b");
+        statsObj.add("b");
+        statsObj.add("c");
+        statsObj.add("c");
+        statsObj.add("c");
+        statsObj.add("c");
+        statsObj.add("m");
+        statsObj.add("m");
+        statsObj.add("m");
+        statsObj.add("m");
+        statsObj.add("m");
+
+
+        System.out.println(statsObj.getCountOf("a"));
+        System.out.println(statsObj.getMostFreq());
+        System.out.println(statsObj.getNumUnique());
+        System.out.println(statsObj.size());
+        System.out.println(statsObj.getTopMostFreq());
+
+        int count = 0;
+        for (int i = 0; i < 1000; i++) {
+            String j = statsObj.getRandom();
+            if (j.equals("m"))
+                count++;
+        }
+        System.out.println((double)(count) / 1000);
 
 
         /*
