@@ -43,7 +43,9 @@ public class StatsObjFinalVer {
     }
 
     public int getCountOf(String testLetter) {
-        return data.get(testLetter);
+        if (data.containsKey(testLetter))
+            return data.get(testLetter);
+        return 0;
     }
 
     public int size() {

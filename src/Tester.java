@@ -38,7 +38,7 @@ public class Tester {
         statsObj.add("m");
 
 
-        System.out.println(statsObj.getCountOf("a"));
+        System.out.println(statsObj.getCountOf("d"));
         System.out.println(statsObj.getMostFreq());
         System.out.println(statsObj.getNumUnique());
         System.out.println(statsObj.size());
