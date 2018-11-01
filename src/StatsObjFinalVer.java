@@ -25,7 +25,6 @@ public class StatsObjFinalVer {
             sort(item);
         }
         size++;
-
     }
 
     public void sort(String item) {
