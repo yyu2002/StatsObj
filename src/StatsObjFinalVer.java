@@ -58,7 +58,7 @@ public class StatsObjFinalVer {
         return data.size();
     }
 
-    public String getTopN() {
+    public String getMostFreq() {
         if (topN.size() < 1)
             return "Obj is empty";
         return topN.get(0);
