@@ -39,7 +39,7 @@ public class Tester {
 
 
         System.out.println(statsObj.getCountOf("d"));
-        System.out.println(statsObj.getMostFreq());
+        System.out.println(statsObj.getOrderOfFrequency());
         System.out.println(statsObj.getNumUnique());
         System.out.println(statsObj.size());
         System.out.println(statsObj.getTopMostFreq());

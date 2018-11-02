@@ -5,13 +5,13 @@ public class StatsObjFinalVer {
     private HashMap<String, Integer> data;
     private int N;
     private int size;
-    private ArrayList<String> mostFreq;
+    private ArrayList<String> orderOfFrequency;
 
     public StatsObjFinalVer(int N) {
         this.N = N;
         data = new HashMap<String, Integer>();
         size = 0;
-        mostFreq = new ArrayList<>();
+        orderOfFrequency = new ArrayList<>();
     }
 
     public void add(String item) {
@@ -19,7 +19,7 @@ public class StatsObjFinalVer {
             return;
         if (data.get(item) == null) {
             data.put(item, 1);
-            mostFreq.add(item);
+            orderOfFrequency.add(item);
         } else {
             data.put(item, data.get(item) + 1);
             sort(item);
@@ -28,10 +28,10 @@ public class StatsObjFinalVer {
     }
 
     public void sort(String item) {
-        if (mostFreq.size() > 0) {
-            for (int i = mostFreq.indexOf(item); i > 0; i--) {
-                if (data.get(mostFreq.get(i)) > data.get(mostFreq.get(i - 1)))
-                    Collections.swap(mostFreq, i, i - 1);
+        if (orderOfFrequency.size() > 0) {
+            for (int i = orderOfFrequency.indexOf(item); i > 0; i--) {
+                if (data.get(orderOfFrequency.get(i)) > data.get(orderOfFrequency.get(i - 1)))
+                    Collections.swap(orderOfFrequency, i, i - 1);
             }
         }
     }
@@ -56,30 +56,30 @@ public class StatsObjFinalVer {
         return data.size();
     }
 
-    public String getMostFreq() {
-        if (mostFreq.size() < 1)
+    public String getOrderOfFrequency() {
+        if (orderOfFrequency.size() < 1)
             return "Obj is empty";
-        return mostFreq.get(0);
+        return orderOfFrequency.get(0);
     }
 
     public ArrayList<String> getTopMostFreq() {
-        ArrayList<String> topMostFreq = new ArrayList<>();
+        ArrayList<String> topN = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            if (mostFreq.size() > i)
-                topMostFreq.add(mostFreq.get(i));
+            if (orderOfFrequency.size() > i)
+                topN.add(orderOfFrequency.get(i));
         }
-        return topMostFreq;
+        return topN;
     }
 
     public String getRandom() {
         int p = (int) (Math.random() * size);
         int numSoFar = 0;
-        for (String letter : mostFreq) {
+        for (String letter : orderOfFrequency) {
             numSoFar += data.get(letter);
             if (p < numSoFar)
                 return letter;
         }
-        return mostFreq.get(mostFreq.size() - 1);
+        return orderOfFrequency.get(orderOfFrequency.size() - 1);
     }
 
 
