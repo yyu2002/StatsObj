@@ -36,10 +36,13 @@ public class Tester {
         statsObj.add("m");
         statsObj.add("m");
         statsObj.add("m");
+        statsObj.add("x");
+        statsObj.add("y");
+        statsObj.add("z");
 
 
         System.out.println(statsObj.getCountOf("d"));
-        System.out.println(statsObj.getOrderOfFrequency());
+        System.out.println(statsObj.getTopN());
         System.out.println(statsObj.getNumUnique());
         System.out.println(statsObj.size());
         System.out.println(statsObj.getTopMostFreq());
@@ -47,7 +50,7 @@ public class Tester {
         int count = 0;
         for (int i = 0; i < 1000; i++) {
             String j = statsObj.getRandom();
-            if (j.equals("m"))
+            if (j.equals("z"))
                 count++;
         }
         System.out.println((double)(count) / 1000);
