@@ -28,11 +28,12 @@ public class StatsObjFinalVer {
     }
 
     public void sort(String item) {
-        if (mostFreq.size() > 0)
+        if (mostFreq.size() > 0) {
             for (int i = mostFreq.indexOf(item); i > 0; i--) {
                 if (data.get(mostFreq.get(i)) > data.get(mostFreq.get(i - 1)))
                     Collections.swap(mostFreq, i, i - 1);
             }
+        }
     }
 
     public void addAllLetters(String str) {
