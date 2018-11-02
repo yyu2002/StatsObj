@@ -78,6 +78,4 @@ public class StatsObjFinalVer {
         }
         return topN.get(0);
     }
-
-
 }
