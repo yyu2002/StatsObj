@@ -1,6 +1,7 @@
 public class Tester {
     public static void main(String[] args) {
 
+        /*
         PriorityQueueStatsObj obj = new PriorityQueueStatsObj(26);
 
         // Alphabet 
@@ -20,7 +21,7 @@ public class Tester {
         System.out.println(obj.getTopMostFreq());
         System.out.println(obj.size());
         System.out.println(obj.getNumUnique());
-
+        */
 
         StatsObjFinalVer statsObj = new StatsObjFinalVer(5);
         statsObj.add("a");
@@ -41,7 +42,7 @@ public class Tester {
         statsObj.add("z");
 
 
-        System.out.println(statsObj.getCountOf("d"));
+        System.out.println(statsObj.getCountOf("m"));
         System.out.println(statsObj.getMostFreq());
         System.out.println(statsObj.getNumUnique());
         System.out.println(statsObj.size());
@@ -50,7 +51,7 @@ public class Tester {
         int count = 0;
         for (int i = 0; i < 1000; i++) {
             String j = statsObj.getRandom();
-            if (j.equals("z"))
+            if (j.equals("m"))
                 count++;
         }
         System.out.println((double)(count) / 1000);
