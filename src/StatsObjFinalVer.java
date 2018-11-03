@@ -19,8 +19,7 @@ public class StatsObjFinalVer {
             return;
         if (data.get(item) == null) {
             data.put(item, 1);
-            if (topN.size() < 5)
-                topN.add(item);
+            topN.add(item);
         } else {
             data.put(item, data.get(item) + 1);
             if (topN.size() > 1)
