@@ -33,7 +33,7 @@ public class StatsObjFinalVer {
             if (data.get(topN.get(i)) > data.get(topN.get(i - 1)))
                 Collections.swap(topN, i, i - 1);
         }
-        if (topN.size() > 5)
+        if (topN.size() > N)
             topN.remove(topN.size() - 1);
     }
 
