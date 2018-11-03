@@ -24,23 +24,12 @@ public class Tester {
         */
 
         StatsObjFinalVer statsObj = new StatsObjFinalVer(5);
-        statsObj.add("a");
-        statsObj.add("b");
-        statsObj.add("b");
-        statsObj.add("b");
-        statsObj.add("c");
-        statsObj.add("c");
-        statsObj.add("c");
-        statsObj.add("c");
-        statsObj.add("m");
-        statsObj.add("m");
-        statsObj.add("m");
-        statsObj.add("m");
-        statsObj.add("m");
-        statsObj.add("x");
-        statsObj.add("y");
-        statsObj.add("z");
-
+        statsObj.addAllLetters("a");
+        statsObj.addAllLetters("bb");
+        statsObj.addAllLetters("ccc");
+        statsObj.addAllLetters("dddd");
+        statsObj.addAllLetters("eeeee");
+        statsObj.addAllLetters("mmmmmmmmmm");
 
         System.out.println(statsObj.getCountOf("m"));
         System.out.println(statsObj.getMostFreq());
@@ -54,7 +43,7 @@ public class Tester {
             if (j.equals("m"))
                 count++;
         }
-        System.out.println((double)(count) / 1000);
+        System.out.println((double) (count) / 1000);
 
 
         /*
