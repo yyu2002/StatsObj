@@ -47,7 +47,7 @@ public class StatsObjFinalVer {
 
     public void addAllLetters(String str) {
         for (int i = 0; i < str.length(); i++) {
-            this.add(str.substring(i, i + 1));
+            add(str.substring(i, i + 1));
         }
     }
 
@@ -78,10 +78,10 @@ public class StatsObjFinalVer {
     public String getRandom() {
         int p = (int) (Math.random() * size);
         int numSoFar = 0;
-        for (String letter : data.keySet()) {
-            numSoFar += data.get(letter);
+        for (String key : data.keySet()) {
+            numSoFar += data.get(key);
             if (p < numSoFar)
-                return letter;
+                return key;
         }
         return topN.get(0);
     }
