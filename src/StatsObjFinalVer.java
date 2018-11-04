@@ -19,11 +19,13 @@ public class StatsObjFinalVer {
             return;
         if (data.get(item) == null) {
             data.put(item, 1);
-            topN.add(item);
+            if (topN.size() < N)
+                topN.add(item);
         } else {
             data.put(item, data.get(item) + 1);
-            if (topN.size() > 1)
-                sort(item);
+            if (!topN.contains(item))
+                topN.add(item);
+            sort(item);
         }
         size++;
     }
@@ -31,10 +33,16 @@ public class StatsObjFinalVer {
     public void sort(String item) {
         for (int i = topN.size() - 1; i > 0; i--) {
             if (data.get(topN.get(i)) > data.get(topN.get(i - 1)))
-                Collections.swap(topN, i, i - 1);
+                swap(i, i - 1);
         }
-        if (topN.size() > N)
+        while (topN.size() > N)
             topN.remove(topN.size() - 1);
+    }
+
+    public void swap(int a, int b) {
+        String temp = topN.get(a);
+        topN.set(a, topN.get(b));
+        topN.set(b, temp);
     }
 
     public void addAllLetters(String str) {
