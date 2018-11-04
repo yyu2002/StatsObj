@@ -21,6 +21,6 @@ public class Tester {
             if (j.equals("m"))
                 count++;
         }
-        System.out.println((double) (count) / 1000); 
+        System.out.println((double) (count) / 1000);
     }
 }
