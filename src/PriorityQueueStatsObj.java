@@ -20,6 +20,7 @@ public class PriorityQueueStatsObj {
         } else {
             e = data.get(entryIndex);
             e.incrementCount();
+            sort(e);
         }
         numOfData++;
     }
